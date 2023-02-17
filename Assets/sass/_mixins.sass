@@ -1,0 +1,103 @@
+// ! Transition
+@mixin transition($property)
+  -webkit-transition: $property 250ms ease-in-out !important
+  -o-transition: $property 250ms ease-in-out !important
+  transition: $property 250ms ease-in-out !important
+
+
+@mixin breakpoint($condition,$breakpoint)
+    // ! Breakpoints Max
+    $mobile-max: 575.98px
+    $mobile-extra-max: 767.98px
+    $tablet-max: 1024.98px
+    $tablet-extra-max: 1200.98px
+    $laptop-max: 1450.98px
+    $laptop-extra-max: 1920.98px
+    $desktop-max: 2400.98px
+    // ! Breakpoints Min
+    $mobile-min: 576px
+    $mobile-extra-min: 768px
+    $tablet-min: 1025px
+    $tablet-extra-min: 1201px
+    $laptop-min: 1451px
+    $laptop-extra-min: 1921px
+    $desktop-min: 2401px
+
+    @if $condition == max
+        $i: max-width
+        @if $breakpoint == mobile
+            $d: $mobile-max
+            @media ($i: $d)
+                @content
+        @else if $breakpoint == mobile-extra
+            $d: $mobile-extra-max
+            @media ($i: $d)
+                @content
+        @else if $breakpoint == tablet
+            $d: $tablet-max
+            @media ($i: $d)
+                @content
+        @else if $breakpoint == tablet-extra
+            $d: $tablet-extra-max
+            @media ($i: $d)
+                @content
+        @else if $breakpoint == laptop
+            $d: $laptop-max
+            @media ($i: $d)
+                @content
+        @else if $breakpoint == laptop-extra
+            $d: $laptop-extra-max
+            @media ($i: $d)
+                @content
+        @else if $breakpoint == desktop
+            $d: $desktop-max
+            @media ($i: $d)
+                @content
+    @else if $condition == min
+        $i: min-width
+        @if $breakpoint == mobile
+            $d: $mobile-min
+            @media ($i: $d)
+                @content
+        @else if $breakpoint == mobile-extra
+            $d: $mobile-extra-min
+            @media ($i: $d)
+                @content
+        @else if $breakpoint == tablet
+            $d: $tablet-min
+            @media ($i: $d)
+                @content
+        @else if $breakpoint == tablet-extra
+            $d: $tablet-extra-min
+            @media ($i: $d)
+                @content
+        @else if $breakpoint == laptop
+            $d: $laptop-min
+            @media ($i: $d)
+                @content
+        @else if $breakpoint == laptop-extra
+            $d: $laptop-extra-min
+            @media ($i: $d)
+                @content
+        @else if $breakpoint == desktop
+            $d: $desktop-min
+            @media ($i: $d)
+                @content
+
+
+@mixin disable
+  display: none !important
+  opacity: 0 !important
+  visibility: hidden !important
+
+@mixin activate
+  display: block !important
+  opacity: 1 !important
+  visibility: visible !important
+
+
+@mixin defaultshadow
+  -webkit-box-shadow: 0 7px 17px #00000029
+  -moz-box-shadow: 0 7px 17px #00000029
+  box-shadow: 0 7px 17px #00000029
+

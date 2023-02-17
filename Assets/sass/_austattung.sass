@@ -1,0 +1,28 @@
+// ! Ausstattung
+
+
+.image-one,
+.image-two,
+.image-three,
+.image-four,
+.image-five,
+.image-six,
+.image-seven,
+.image-eight
+  .elementor-cta
+    height: 300px
+
+// ! IMage Active
+.elementor-widget-call-to-action
+  @include transition(all)
+
+.image-activee.elementor-widget-call-to-action
+  @include breakpoint(min, tablet-extra)
+    -webkit-transform: scale(1.1)
+    -ms-transform: scale(1.1)
+    transform: scale(1.1)
+    z-index: 100
+
+  .elementor-cta
+    .elementor-cta__bg-wrapper
+      border: 5px solid var(--e-global-color-secondary)

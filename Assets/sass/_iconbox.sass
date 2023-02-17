@@ -1,0 +1,48 @@
+// ! Icon Box
+.elementor-icon-box-wrapper
+  -webkit-box-pack: end
+  -ms-flex-pack: end
+  justify-content: flex-end
+  -webkit-box-align: center
+  -ms-flex-align: center
+  align-items: center
+
+  .elementor-icon-box-content
+    .elementor-icon-box-title
+      margin: 0
+
+  .elementor-icon-box-icon
+    .elementor-icon
+      display: -webkit-box
+      display: -ms-flexbox
+      display: flex
+      -webkit-box-orient: horizontal
+      -webkit-box-direction: normal
+      -ms-flex-direction: row
+      flex-direction: row
+      -webkit-box-pack: center
+      -ms-flex-pack: center
+      justify-content: center
+      -webkit-box-align: center
+      -ms-flex-align: center
+      align-items: center
+      width: 77px
+      height: 77px
+      border: 2px solid var(--e-global-color-5c325c1)
+      border-radius: 50%
+
+      svg
+        .st1
+          @include activate
+
+        path
+          fill: var(--e-global-color-5c325c1)
+
+
+.elementor-location-footer
+  .elementor-icon-box-wrapper
+    .elementor-icon-box-icon
+      .elementor-icon
+        border: 0 !important
+
+

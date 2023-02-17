@@ -1,0 +1,46 @@
+// ! Language Switch
+.lang-item-de,
+.lang-item-en
+  .elementor-item
+    @include breakpoint(min, tablet-extra)
+      padding: 0 !important
+      margin: 7px 0 0 7px !important
+    font-size: 12px !important
+    &:before
+      content: ''
+      position: relative
+      display: block !important
+      width: 20px !important
+      height: 20px !important
+      background-image: url('/wp-content/uploads/2023/01/british-flag.svg')
+      background-size: 113%
+      border-radius: 50%
+      opacity: 1 !important
+
+.lang-item-de
+  .elementor-item
+    &:before
+      background-image: url('/wp-content/uploads/2023/01/german-flag.svg')
+
+.lang-item-en
+  .elementor-item
+    &:before
+      background-image: url('/wp-content/uploads/2023/01/british-flag.svg')
+
+.lang-item
+  &:not(.current-lang)
+    opacity: .5
+  &:hover,
+  &:focus,
+  &:focus-within
+    opacity: 1 !important
+
+
+
+html[lang="en-GB"]
+  .deutsch
+    @include disable
+
+html[lang="de-DE"]
+  .englisch
+    @include disable

@@ -1,0 +1,133 @@
+@import "var"
+@import "mixins"
+@import "button"
+@import "navigation"
+@import "typografie"
+@import "iconbox"
+@import "accordeon"
+@import "swiper"
+@import "iconlist"
+@import "languageswitch"
+@import "calltoaction"
+@import "austattung"
+
+// ! Default Transition
+a,
+button,
+.elementor-button,
+.swiper-pagination-bullet,
+.quick-navi,
+.sub-arrow,
+li.menu-item > a,
+.line,
+.elementor-widget-container,
+i.icon,
+.elementor-widget-wrap,
+.elementor-post__card,
+.logos article.elementor-post
+  @include transition(all)
+
+a
+  &:hover,
+  &:focus,
+  &:focus-within
+    @include breakpoint(min, tablet)
+      //-webkit-transform: scale(1.1)
+      //-ms-transform: scale(1.1)
+      //transform: scale(1.1)
+    cursor: pointer !important
+  cursor: pointer !important
+
+body
+  background-color: var(--e-global-color-88ff11f) !important
+  > .elementor
+    &:not(.elementor-location-header):not(.elementor-location-footer)
+      background-color: var(--e-global-color-5c325c1)
+
+
+
+// ! Colors
+.green
+  color: var(--e-global-color-primary)
+
+.orange
+  color: var(--e-global-color-secondary)
+
+@include breakpoint(max, mobile-extra)
+  .text-mobile-dark
+    h1, h2, h3, h4, h5, h6, p
+      color: var(--e-global-color-text) !important
+
+
+// ! Startseite
+@include breakpoint(max, tablet)
+  .tablet-down-color-black
+    *
+      color: var(--e-global-color-secondary) !important
+
+.start
+  .elementor-background-slideshow
+    opacity: .07
+
+  .elementor-background-overlay
+    z-index: -1
+
+
+/// ! Quick Link
+.quick-link
+  .elementor-widget-call-to-action
+    .elementor-widget-container,
+    .elementor-widget-container .elementor-cta
+      overflow: visible !important
+    .elementor-widget-container
+      .elementor-cta
+        &:hover,
+        &:focus,
+        &:focus-within
+          -webkit-transform: scale(1.05)
+          -ms-transform: scale(1.05)
+          transform: scale(1.05)
+        &:before
+          content: ''
+          position: absolute
+          top: 0
+          left: 0
+          display: block
+          width: 100%
+          height: 100%
+          background: transparent linear-gradient(190deg, #22260100 0%, var(--unnamed-color-222601) 100%) 0% 0% no-repeat padding-box
+          background: transparent linear-gradient(190deg, #22260100 0%, #222601 100%) 0% 0% no-repeat padding-box
+          z-index: 2
+          border-radius: 55px
+          opacity: .5
+
+        .elementor-cta__content
+          z-index: 3
+
+// ! BG Overlay
+.bg-overlay
+  .elementor-background-slideshow
+    &:before
+      content: ''
+      position: absolute
+      top: 0
+      left: 0
+      display: block
+      width: 100%
+      height: 100%
+      background: transparent linear-gradient(190deg, #22260100 0%, var(--unnamed-color-222601) 100%) 0% 0% no-repeat padding-box
+      background: transparent linear-gradient(190deg, #22260100 0%, #222601 100%) 0% 0% no-repeat padding-box
+      z-index: 2
+      opacity: .5
+
+
+
+
+
+
+.elementor-location-footer
+  .elementor-sub-item,
+  .elementor-item
+    background-color: transparent !important
+
+

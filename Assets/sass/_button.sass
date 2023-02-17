@@ -1,0 +1,68 @@
+// ! Buttons
+.st1
+  @include activate
+
+.elementor-button-wrapper
+  .elementor-button-link
+    .elementor-button-content-wrapper
+      -webkit-box-align: center
+      -ms-flex-align: center
+      align-items: center
+      .elementor-button-icon
+        svg
+          width: 26px
+          height: 26px
+
+// ! Information Button
+.elementor-button-success
+  .elementor-button-wrapper
+    .elementor-button-link
+      .elementor-button-content-wrapper
+        .elementor-button-icon
+          background-color: var(--e-global-color-accent)
+          svg
+            path
+              fill: var(--e-global-color-primary)
+
+.elementor-button-info
+  .elementor-button-wrapper
+    .elementor-button-link
+      .elementor-button-content-wrapper
+        .elementor-button-icon
+          background-color: var(--e-global-color-text)
+
+.elementor-button-info,
+.elementor-button-success
+  .elementor-button-wrapper
+    .elementor-button-link
+      .elementor-button-content-wrapper
+        .elementor-button-icon
+          display: flex
+          flex-direction: row
+          justify-content: center
+          align-items: center
+          width: 80px
+          min-width: 80px
+          height: 80px
+          min-height: 80px
+          border-radius: 50%
+          svg
+            width: 20px
+            height: 20px
+
+
+// ! Footer BUtton
+.footer-button
+  margin-left: 15px
+  width: 100px !important
+  height: 100px
+  @include transition(all)
+  &:hover,
+  &:focus,
+  &:focus-within
+    -webkit-transform: scale(1.1)
+    -ms-transform: scale(1.1)
+    transform: scale(1.1)
+  .elementor-icon
+    width: 100% !important
+    height: 60px !important
